@@ -158,7 +158,7 @@ function getFieldName(input) {
   return input.id.charAt(0).toUpperCase() + input.id.slice(1)
 }
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault()
 
   checkRequired([userName, email])
@@ -167,8 +167,8 @@ form.addEventListener('submit', (e) => {
   }
   if(!errors) {
     const data = { 
-      name: userName, 
-      email,
+      name: userName.value, 
+      email: email.value, 
     }
     localStorage.setItem('lead', JSON.stringify(data))
   }
