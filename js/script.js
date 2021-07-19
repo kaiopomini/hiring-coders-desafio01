@@ -161,8 +161,10 @@ function getFieldName(input) {
 form.addEventListener('submit', (e) => {
   e.preventDefault()
 
-  checkEmail(email)
   checkRequired([userName, email])
+  if(!errors) {
+    checkEmail(email)
+  }
   if(!errors) {
     const data = { 
       name: userName, 
