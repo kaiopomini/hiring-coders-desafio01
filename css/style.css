@@ -1,0 +1,191 @@
+:root {
+  --slider-x: 350px;
+  --slider-y: 350px;
+  --error-color: #e74c3c;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url(../assets/black-friday-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #eee;
+  text-shadow: 1px 1px 2px black;
+  background-color: #2c2c2c;
+
+
+}
+header{
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #222222;
+}
+
+header img {
+  height: 100px;
+
+}
+
+main{
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 80px;
+  padding-bottom: 120px;
+}
+
+
+.section-countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  text-align: center;
+}
+.section-countdown #countdown {
+  font-size: 36px;
+  font-weight: bolder;
+}
+
+.main-content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.promotion-section {
+  text-align: center;
+
+}
+
+.slider {
+  margin-top: 40px;
+  width: var(--slider-x);
+  height: var(--slider-y);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  background-image: url(../assets/explosion-01.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-items: center;
+}
+
+.image-container {
+  width: 100%;
+  flex-shrink: 0;
+  position: relative;
+  transition: margin-left .6s ease-in-out;
+}
+
+.image-container img {
+  width: inherit;
+  
+}
+.price {
+  position: absolute;
+  bottom: 0px;
+  right: 20%;
+  transform: rotate(-40deg)
+}
+.price img {
+  width: 80px;
+}
+.price p {
+  margin-left: 4px;
+  align-self: center;
+  position: absolute;
+  bottom: 30%;
+  font-size: 20px;
+}
+
+.form-section {
+  padding: 24px;
+  max-width: 350px;
+  text-align: center;
+  border: 1px solid #777777;
+  border-radius: 8px;
+  background-color: #444444cc;
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.form-group {
+  margin-top: 40px;
+  
+}
+
+.form-control{
+  position: relative;
+}
+.form-control input {
+  background: #00000000;
+  border: none;
+  border-bottom: 1px solid #777777;
+  color: #eeeeee;
+  font-size: 20px;
+  height: 48px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.form-control input:focus-visible {
+  outline: none;
+}
+.form-control.error input {
+  border-color: var(--error-color);
+}
+
+.form-control small {
+  color: var(--error-color);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  visibility: hidden;
+
+}
+
+.form-control.error small {
+  visibility: visible;
+}
+
+.form button {
+  cursor: pointer;
+  margin-top: 40px;
+  height: 48px;
+  width: 160px;
+  background-color: #eeeeee;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form button:active {
+  transform: scale(99%)
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  background: #222222;
+  bottom: 0;
+  left: 0;
+  height: 80px;
+  position: fixed;
+  width: 100%;
+}
